@@ -1,0 +1,17 @@
+﻿  
+  D:\Programming\Projects\Machine Learning\Practice\cpp\Machine Learning and CUDA Practice\Machine Learning Practice>"C:\Programs\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin\nvcc.exe" -ccbin "C:\Programs\IDEs\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\bin\HostX86\x64" -x cu  -I"C:\Programs\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" -I"C:\Programs\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include"  -G   --keep-dir x64\Debug -maxrregcount=0 --ptxas-options=-v --machine 64 --compile   -g   -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd " -o x64\Debug\cuda_math.cu.obj "D:\Programming\Projects\Machine Learning\Practice\cpp\Machine Learning and CUDA Practice\Machine Learning Practice\cuda_math.cu" -clean 
+  cuda_math.cu
+  Compiling CUDA source file cuda_math.cu...
+  
+  D:\Programming\Projects\Machine Learning\Practice\cpp\Machine Learning and CUDA Practice\Machine Learning Practice>"C:\Programs\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env --cl-version 2017 -ccbin "C:\Programs\IDEs\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\bin\HostX86\x64" -x cu  -I"C:\Programs\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" -I"C:\Programs\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include"  -G   --keep-dir x64\Debug -maxrregcount=0 --ptxas-options=-v --machine 64 --compile -cudart static  -g   -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd " -o x64\Debug\cuda_math.cu.obj "D:\Programming\Projects\Machine Learning\Practice\cpp\Machine Learning and CUDA Practice\Machine Learning Practice\cuda_math.cu" 
+  ptxas info    : 0 bytes gmem
+  ptxas info    : Function properties for _ZN4dim3C1Ejjj
+      0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+  ptxas info    : Function properties for _ZN4dim3C2Ejjj
+      16 bytes stack frame, 16 bytes spill stores, 16 bytes spill loads
+  ptxas info    : Compiling entry function '_Z8k_VecAddiPfS_' for 'sm_30'
+  ptxas info    : Function properties for _Z8k_VecAddiPfS_
+      0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+  ptxas info    : Used 10 registers, 344 bytes cmem[0]
+  cuda_math.cu
+  Machine Learning Practice.vcxproj -> D:\Programming\Projects\Machine Learning\Practice\cpp\Machine Learning and CUDA Practice\x64\Debug\Machine Learning Practice\Machine Learning Practice.lib

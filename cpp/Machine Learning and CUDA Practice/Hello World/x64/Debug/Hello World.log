@@ -1,0 +1,18 @@
+﻿  
+  D:\Programming\Projects\Machine Learning\Practice\cpp\Machine Learning and CUDA Practice\Hello World>"C:\Programs\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin\nvcc.exe" -ccbin "C:\Programs\IDEs\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\bin\HostX86\x64" -x cu  -I"C:\Programs\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" -I"C:\Programs\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include"  -G   --keep-dir x64\Debug -maxrregcount=0 --ptxas-options=-v --machine 64 --compile   -g   -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd " -o x64\Debug\cuda_wrapper.cu.obj "D:\Programming\Projects\Machine Learning\Practice\cpp\Machine Learning and CUDA Practice\Hello World\cuda_wrapper.cu" -clean 
+  cuda_wrapper.cu
+  Compiling CUDA source file cuda_wrapper.cu...
+  
+  D:\Programming\Projects\Machine Learning\Practice\cpp\Machine Learning and CUDA Practice\Hello World>"C:\Programs\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env --cl-version 2017 -ccbin "C:\Programs\IDEs\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\bin\HostX86\x64" -x cu  -I"C:\Programs\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" -I"C:\Programs\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include"  -G   --keep-dir x64\Debug -maxrregcount=0 --ptxas-options=-v --machine 64 --compile -cudart static  -g   -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd " -o x64\Debug\cuda_wrapper.cu.obj "D:\Programming\Projects\Machine Learning\Practice\cpp\Machine Learning and CUDA Practice\Hello World\cuda_wrapper.cu" 
+  ptxas info    : 47 bytes gmem
+  ptxas info    : Function properties for _ZN4dim3C1Ejjj
+      0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+  ptxas info    : Function properties for _ZN4dim3C2Ejjj
+      16 bytes stack frame, 16 bytes spill stores, 16 bytes spill loads
+  ptxas info    : Compiling entry function '_Z17helloWorldThreadsi' for 'sm_30'
+  ptxas info    : Function properties for _Z17helloWorldThreadsi
+      8 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+  ptxas info    : Used 8 registers, 8 bytes cumulative stack size, 324 bytes cmem[0]
+  cuda_wrapper.cu
+  main.cpp
+  Hello World.vcxproj -> D:\Programming\Projects\Machine Learning\Practice\cpp\Machine Learning and CUDA Practice\x64\Debug\Hello World\Hello World.exe
