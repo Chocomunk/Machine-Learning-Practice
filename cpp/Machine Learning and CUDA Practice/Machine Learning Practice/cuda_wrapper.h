@@ -1,12 +1,8 @@
-#ifndef CUDA_WRAPPER_H
-#define CUDA_WRAPPER_H
+#pragma once
+#include "cuda_dim.cuh"
 
-void cuda_VecAdd(int n, float *a, float *b, float *c);
+void cuda_MatAdd(const c_dim3& dim, float *a, float *b, float *c);
+void cuda_MatDot(const c_dim3& dim, float *a, float *b, float *c);
 
-float* vecAdd(const int n, float *a, float *b) {
-	float *out = new float[n];
-	cuda_VecAdd(n, a, b, out);
-	return out;
-}
-
-#endif // !CUDA_WRAPPER_H
+float* matAdd(const c_dim3& dim, float *a, float *b);
+float* matDot(const c_dim3& dim, float* a, float* b);

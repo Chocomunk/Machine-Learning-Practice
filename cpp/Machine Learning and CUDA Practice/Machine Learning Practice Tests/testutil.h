@@ -8,3 +8,11 @@ bool vecIsEqual(const int n, float *a, float *b) {
 	}
 	return true;
 }
+
+float* generateSet(const int n) {
+	float *out = new float[n];
+	for (int i = 0; i < n; i++) {
+		out[i] = i;
+	}
+	return out;
+}

@@ -1,0 +1,5 @@
+# cpp build files
+x64/
+
+# Visual studio files
+.vs/

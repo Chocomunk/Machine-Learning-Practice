@@ -82,9 +82,19 @@
     <Link>
       <AdditionalDependencies>cuda.lib;cudart.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>echo copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"
+copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
     <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
       <PtxAsOptionV>true</PtxAsOptionV>
+      <InterleaveSourceInPTX>true</InterleaveSourceInPTX>
+      <GenerateLineInfo>false</GenerateLineInfo>
     </CudaCompile>
+    <CudaLink>
+      <AdditionalOptions>-lcuda -lcudart %(AdditionalOptions)</AdditionalOptions>
+    </CudaLink>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -120,10 +130,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="cuda_dim.cuh" />
+    <ClInclude Include="cuda_headers.cuh" />
     <ClInclude Include="cuda_wrapper.h" />
   </ItemGroup>
   <ItemGroup>
     <CudaCompile Include="cuda_math.cu" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cuda_dim.cpp" />
+    <ClCompile Include="cuda_wrapper.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
